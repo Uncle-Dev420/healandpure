@@ -407,3 +407,66 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   z-index: 999;
 }
+
+/* Add this to hide close button initially */
+#menu-close {
+  display: none;
+}
+
+/* Show close button when menu is active */
+.nav-links.active ~ .menu-toggle #menu-close {
+  display: block;
+}
+
+/* Hide open button when menu is active */
+.nav-links.active ~ .menu-toggle #menu-open {
+  display: none;
+}
+
+/* Fix mobile nav closing after click */
+@media (max-width: 768px) {
+  .nav-links {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  
+  .nav-links.active {
+    height: auto;
+    padding: 1rem;
+  }
+}
+
+/* Improve mobile hero text sizing */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Fix feature card alignment on mobile */
+@media (max-width: 768px) {
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add to style.css */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Add to style.css */
+@media (max-width: 480px) {
+  .highlight-text ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+}

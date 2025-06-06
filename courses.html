@@ -132,14 +132,26 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    const menuOpen = document.getElementById('menu-open');
-    const menuClose = document.getElementById('menu-close');
-    const navLinks = document.querySelector('.nav-links');
-    menuOpen.onclick = () => navLinks.classList.add('active');
-    menuClose.onclick = () => navLinks.classList.remove('active');
-  </script>
+<script>
+  // Mobile nav toggle - UPDATED
+  const menuOpen = document.getElementById('menu-open');
+  const menuClose = document.getElementById('menu-close');
+  const navLinks = document.querySelector('.nav-links');
+
+  function toggleMenu() {
+    navLinks.classList.toggle('active');
+  }
+
+  menuOpen.onclick = toggleMenu;
+  menuClose.onclick = toggleMenu;
+
+  // Close menu when clicking links - NEW
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
   AOS.init({
