@@ -470,3 +470,13 @@ body {
     font-size: 0.9rem;
   }
 }
+/* Add to style.css */
+.team-card {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .feature-cards .feature-card {
+    margin-bottom: 1.5rem;
+  }
+}
