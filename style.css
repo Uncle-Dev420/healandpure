@@ -488,7 +488,7 @@ max-width: 100%;
     flex-direction: column;
     width: 200px;
     box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
-    transition: right 0.3s;
+    transition: left 0.3s;
     padding: 1rem;
   }
   .nav-links.active {
