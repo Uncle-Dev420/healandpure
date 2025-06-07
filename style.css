@@ -129,7 +129,7 @@ header {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.9)), url("assets/caregiver-hero.jpg");
+  background: linear-gradient(rgba(30, 58, 138, 0.6), rgba(30, 58, 138, 0.8));
   background-size: cover;
   background-position: center;
   color: var(--white);
@@ -347,12 +347,40 @@ header {
   color: var(--light-teal);
 }
 
-/* Responsive */
-.course-section img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.course-section {
+  padding: 4rem 2rem;
+  background: var(--sky);
 }
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.course-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+}
+.course-card h3 {
+  color: var(--navy);
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 @media (max-width: 768px) {
   .nav-links {
@@ -506,4 +534,15 @@ body {
   .feature-cards .feature-card {
     margin-bottom: 1.5rem;
   }
+}
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
 }
