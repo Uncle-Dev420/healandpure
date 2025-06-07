@@ -1,6 +1,5 @@
-/* Font */
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@300;700&display=swap');
-
 
 /* Variables */
 :root {
@@ -15,49 +14,64 @@
   --shadow: rgba(0, 0, 0, 0.05);
 }
 
-/* Reset & Base Styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   background: var(--bg);
   color: var(--gray);
   line-height: 1.7;
-  position: relative;
-  overflow: auto;
 }
 
-#background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
 }
+
 img {
   max-width: 100%;
   display: block;
 }
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-ul {
-  list-style: none;
-}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Navigation */
+ul {
+  list-style: none;
+}
+
+a:hover, button:hover {
+  opacity: 0.85;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Background Video */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* Header */
 header {
   background: var(--white);
   box-shadow: 0 2px 8px var(--shadow);
@@ -65,11 +79,13 @@ header {
   top: 0;
   z-index: 1000;
 }
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  position: relative;
 }
 
 .logo-group {
@@ -91,73 +107,65 @@ header {
   font-weight: 700;
   color: var(--navy);
 }
+
 .brand-sub {
   font-size: 0.85rem;
   font-weight: 400;
   color: var(--teal);
 }
 
-
-@media (max-width: 768px) {
-  .logo {
-    height: 55px;
-  }
-}
-@media (max-width: 500px) {
-  .brand-name {
-    font-size: 1rem;
-  }
-}
-
+/* Nav */
 .nav-links {
   display: flex;
   gap: 2rem;
-  transition: right 0.3s ease;
 }
+
 .nav-links li a {
   color: var(--navy);
   font-weight: 500;
-  transition: 0.3s;
 }
+
 .nav-links li a.active,
 .nav-links li a:hover {
   color: var(--teal);
 }
+
 .menu-toggle {
   display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--navy);
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   background: linear-gradient(rgba(30, 58, 138, 0.6), rgba(30, 58, 138, 0.8));
-  background-size: cover;
-  background-position: center;
-  color: var(--white);
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 2rem;
+  color: var(--white);
 }
+
 .hero h1 {
   font-size: 3rem;
   letter-spacing: 1px;
 }
-.hero p {
-  margin: 1rem 0 2rem;
-  font-size: 1.2rem;
-}
 
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
 
 .hero-buttons {
   margin-top: 2rem;
   display: flex;
-  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
-
 
 /* Buttons */
 .btn {
@@ -166,28 +174,33 @@ header {
   font-weight: 600;
   transition: 0.3s;
 }
+
 .btn.blue {
   background: var(--blue);
   color: var(--white);
 }
+
 .btn.blue:hover {
   background: transparent;
   border: 2px solid var(--white);
-  color: var(--white);
 }
+
 .btn.white {
   background: var(--white);
   color: var(--navy);
 }
+
 .btn.white:hover {
   background: transparent;
   border: 2px solid var(--white);
   color: var(--white);
 }
+
 .btn.teal {
   background: var(--teal);
   color: var(--white);
 }
+
 .btn.teal:hover {
   background: var(--light-teal);
 }
@@ -200,30 +213,36 @@ header {
   padding: 5rem 0;
   align-items: center;
 }
+
 .about-text {
   flex: 1;
 }
+
 .about-text h2 {
   color: var(--navy);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
 .about-icons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 2rem;
 }
+
 .icon-box {
   display: flex;
   align-items: center;
   gap: 0.8rem;
   font-weight: 500;
 }
+
 .icon-box i {
   color: var(--teal);
   font-size: 1.2rem;
 }
+
 .about-img {
   flex: 1;
   border-radius: 10px;
@@ -237,411 +256,38 @@ header {
   padding: 5rem 0;
   text-align: center;
 }
-.features h2 {
-  font-size: 2rem;
-  color: var(--navy);
-  margin-bottom: 0.5rem;
-}
+
 .feature-cards {
   margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
+
 .feature-card {
-  background: var(--white);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
-.footer {
-  background: var(--navy);
-  color: var(--sky);
-  padding: 4rem 2rem;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-}
 .feature-card:hover {
   transform: translateY(-5px);
 }
+
 .feature-card i {
   font-size: 2rem;
   color: var(--teal);
   margin-bottom: 1rem;
 }
+
 .feature-card h3 {
   color: var(--navy);
-  margin-bottom: 0.5rem;
 }
 
-/* Highlight Section */
-.highlight {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  padding: 5rem 0;
-}
-.highlight-text {
-  flex: 1;
-}
-.highlight-text h2 {
-  color: var(--navy);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.highlight-text ul {
-  margin-top: 1rem;
-  padding-left: 1rem;
-}
-.highlight-text li {
-  margin-bottom: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.highlight-text li i {
-  color: var(--teal);
-}
-.highlight-img {
-  flex: 1;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px var(--shadow);
-}
-
-/* Call to Action */
-.cta {
-  background: var(--navy);
-  color: var(--white);
-  padding: 4rem 2rem;
-  text-align: center;
-}
-.cta h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.cta p {
-  margin-bottom: 2rem;
-}
-
-/* Footer */
-.footer {
-  background: var(--navy);
-  color: var(--sky);
-  padding: 4rem 2rem;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
-.footer h3, .footer h4 {
-  color: var(--white);
-  margin-bottom: 1rem;
-}
-.footer p, .footer li {
-  font-size: 0.95rem;
-}
-.footer a:hover {
-  color: var(--light-teal);
-}
-
-/* Section Title */
-
-.course-section .section-title {
-
-text-align: center;
-
-font-size: 2rem;
-
-color: var(--navy);
-
-margin-bottom: 2rem;
-
-}
-
-/* Grid Layout */
-
-.course-grid {
-
-display: flex;
-
-flex-wrap: wrap;
-
-gap: 2rem;
-
-justify-content: center;
-
-}
-
-/* Card Base */
-
-.course-card {
-
-flex: 1 1 300px;
-
-background: var(--white);
-
-padding: 2rem;
-
-border-radius: 15px;
-
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-
-text-align: left;
-
-max-width: 400px;
-
-display: flex;
-
-flex-direction: column;
-
-justify-content: center;
-
-}
-
-/* Image Card Specific */
-
-.course-card.image-card {
-
-padding: 0;
-
-}
-
-.course-card.image-card img {
-
-width: 100%;
-
-height: auto;
-
-border-radius: 15px;
-
-display: block;
-
-}
-
-/* List inside card */
-
-.course-card ul {
-
-padding-left: 1.2rem;
-
-}
-
-.course-card li {
-
-margin-bottom: 0.8rem;
-
-display: flex;
-
-align-items: center;
-
-gap: 0.5rem;
-
-}
-
-.course-card li i {
-
-color: var(--teal);
-
-}
-
-/* Responsive Stack */
-
-@media (max-width: 768px) {
-
-.course-grid {
-
-flex-direction: column;
-
-align-items: stretch;
-
-}
-
-.course-card {
-
-max-width: 100%;
-
-}
-
-}
-
-
-
-
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background: var(--white);
-    flex-direction: column;
-    width: 200px;
-    box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
-    transition: left 0.3s;
-    padding: 1rem;
-  }
-  .nav-links.active {
-    right: 0;
-  }
-  .menu-toggle {
-    display: block;
-    font-size: 1.5rem;
-    color: var(--navy);
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .hero-buttons {
-    flex-direction: column;
-  }
-}
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 24px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  z-index: 999;
-  transition: transform 0.3s;
-}
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-* {
-  scroll-behavior: smooth;
-  transition: all 0.3s ease;
-}
-a:hover, button:hover {
-  opacity: 0.85;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Merriweather', serif;
-}
-body {
-  font-family: 'Poppins', sans-serif;
-}
-.feature-card, .highlight-text, .contact-form {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-}
-
-.enroll-float {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background: var(--teal);
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  z-index: 999;
-}
-
-/* Add this to hide close button initially */
-#menu-close {
-  display: none;
-}
-
-/* Show close button when menu is active */
-.nav-links.active ~ .menu-toggle #menu-close {
-  display: block;
-}
-
-/* Hide open button when menu is active */
-.nav-links.active ~ .menu-toggle #menu-open {
-  display: none;
-}
-
-/* Fix mobile nav closing after click */
-@media (max-width: 768px) {
-  .nav-links {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
-  }
-  
-  .nav-links.active {
-    height: auto;
-    padding: 1rem;
-  }
-}
-
-/* Improve mobile hero text sizing */
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-/* Fix feature card alignment on mobile */
-@media (max-width: 768px) {
-  .feature-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Add to style.css */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-}
-
-/* Add to style.css */
-@media (max-width: 480px) {
-  .highlight-text ul li {
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-  }
-}
-/* Add to style.css */
-.team-card {
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .feature-cards .feature-card {
-    margin-bottom: 1.5rem;
-  }
-}
-#background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 1;
-}
-
+/* Courses */
 .course-section {
   padding: 4rem 2rem;
   background: var(--sky);
@@ -654,7 +300,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Layout Grid */
 .course-grid {
   display: flex;
   flex-wrap: wrap;
@@ -662,7 +307,6 @@ body {
   justify-content: center;
 }
 
-/* Card Styling */
 .course-card {
   flex: 1 1 300px;
   background: var(--white);
@@ -687,14 +331,125 @@ body {
   color: var(--teal);
 }
 
-/* Responsive: Stack vertically on mobile */
+.course-card.image-card {
+  padding: 0;
+}
+
+.course-card.image-card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* CTA */
+.cta {
+  background: var(--navy);
+  color: var(--white);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background: var(--navy);
+  color: var(--sky);
+  padding: 4rem 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.footer a:hover {
+  color: var(--light-teal);
+}
+
+/* Floating */
+.whatsapp-float,
+.enroll-float {
+  position: fixed;
+  right: 20px;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.whatsapp-float {
+  bottom: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.enroll-float {
+  bottom: 80px;
+  background: var(--teal);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    flex-direction: column;
+    background: var(--white);
+    width: 200px;
+    padding: 1rem;
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    display: flex;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #menu-close {
+    display: none;
+  }
+
+  .nav-links.active ~ .menu-toggle #menu-close {
+    display: inline-block;
+  }
+
+  .nav-links.active ~ .menu-toggle #menu-open {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
   .course-grid {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .course-card {
-    max-width: 100%;
+  .feature-cards {
+    grid-template-columns: 1fr;
   }
 }
