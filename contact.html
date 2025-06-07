@@ -71,25 +71,46 @@
       </div>
 
       <!-- Contact Form -->
-      <div class="contact-form">
-        <h2 data-aos="fade-up">Send Us a Message</h2>
-   <form data-aos="zoom-in" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <input type="tel" name="phone" placeholder="Phone Number">
-  <select name="interest" required>
-    <option disabled selected>Interested In</option>
-    <option>Caregiver Basic Training</option>
-    <option>Workshops</option>
-    <option>Other</option>
-  </select>
-  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-  <button type="submit" class="btn teal">Send Message</button>
-</form>
-
+<!-- Contact Form -->
+<div class="contact-form">
+  <h2 data-aos="fade-up">Send Us a Message</h2>
+  <form data-aos="zoom-in" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form-styled">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" required placeholder="John Doe">
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email" required placeholder="you@example.com">
       </div>
     </div>
-  </section>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone" placeholder="+977 98XXXXXXXX">
+      </div>
+      <div class="form-group">
+        <label for="interest">Interested In</label>
+        <select name="interest" id="interest" required>
+          <option disabled selected>Select an option</option>
+          <option>Caregiver Basic Training</option>
+          <option>Workshops</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Your Message</label>
+      <textarea name="message" id="message" rows="5" required placeholder="Type your message here..."></textarea>
+    </div>
+
+    <button type="submit" class="btn teal">Send Message</button>
+  </form>
+</div>
+
 
   <!-- Google Map -->
   <section data-aos="fade-up" style="margin-top: 2rem;">
