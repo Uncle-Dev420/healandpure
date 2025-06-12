@@ -171,17 +171,22 @@
   </a>
 
   <!-- Scripts -->
-  <script>
-    const menuOpen = document.getElementById('menu-open');
-    const menuClose = document.getElementById('menu-close');
-    const navLinks = document.querySelector('.nav-links');
-    function toggleMenu() { navLinks.classList.toggle('active'); }
-    menuOpen.onclick = toggleMenu;
-    menuClose.onclick = toggleMenu;
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => { navLinks.classList.remove('active'); });
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const menuClose = document.getElementById('menu-close');
+  const navMenu = document.getElementById('mobileMenu');
+
+  menuIcon.onclick = () => navMenu.classList.add('active');
+  menuClose.onclick = () => navMenu.classList.remove('active');
+
+  // Also close when any nav link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
     });
-  </script>
+  });
+</script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>AOS.init({ duration: 1000, once: true });</script>
   <script src="script.js"></script>
