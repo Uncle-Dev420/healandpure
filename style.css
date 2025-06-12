@@ -469,6 +469,15 @@ header {
     right: 0;
   }
 
+   .close-btn {
+    display: block;
+    align-self: flex-end;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    color: var(--pro-blue);
+  }
+
   .menu-toggle {
     display: block;
   }
