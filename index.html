@@ -3,21 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Heal and Pure Caregiver Training Center" />
-  <meta property="og:image" content="https://yourdomain.com/assets/preview.jpg" />
-  <meta property="og:description" content="CTEVT Certified Caregiver Training Center in Pokhara" />
   <title>Heal and Pure Caregiver Training Center</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="shortcut icon" href="assets/logo(half).png" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
-
-
-  <!-- Header / Navigation -->
+  <!-- Header -->
   <header>
     <nav class="container nav-bar">
       <div class="logo-group">
@@ -27,7 +22,6 @@
           <span class="brand-sub">Caregiver Training Center</span>
         </div>
       </div>
-
       <ul class="nav-links">
         <li><a href="#" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -41,51 +35,42 @@
     </nav>
   </header>
 
-  
-  
-
   <!-- Hero Section -->
   <section class="hero" data-aos="fade-up">
     <div class="hero-content">
       <h1>HEAL AND PURE</h1>
       <p>Empowering future caregivers with practical training and compassionate care.</p>
-    
       <div class="hero-buttons">
         <a href="courses.html" class="btn blue">View Courses</a>
         <a href="contact.html" class="btn white">Contact Us</a>
       </div>
     </div>
-     
-  <video autoplay loop muted playsinline id="background-video">
-    <source src="assets/vid.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <video autoplay loop muted playsinline id="background-video">
+      <source src="assets/vid.mp4" type="video/mp4">
+    </video>
   </section>
 
-  <!-- About Us -->
-  <section class="about container" data-aos="fade-up">
-    <div class="about-text">
-      <h2 data-aos="fade-up">Who We Are</h2>
-      <lottie-player 
-      src="https://assets10.lottiefiles.com/packages/lf20_0yfsb3a1.json" 
-      background="transparent"
-      speed="1"
-      style="width: 200px; margin-top: 20px;" 
-      loop autoplay>
-    </lottie-player>
-      <p>Founded in 2024, Heal and Pure is a training center committed to nurturing professional caregivers. We blend real-world experience with certified training to produce ready-to-serve graduates.</p>
-      <div class="about-icons">
+<section class="about container" data-aos="fade-up">
+  <div class="about-grid">
+    <div class="about-img" data-aos="fade-right">
+      <img src="assets/hey.png" alt="Nurse using computer" />
+    </div>
+    <div class="about-text" data-aos="fade-left">
+      <h2>Who We Are</h2>
+      <p>
+        Founded in 2024, Heal and Pure is a training center committed to nurturing professional caregivers. We blend real-world experience with certified training to produce ready-to-serve graduates.
+      </p>
+      <div class="about-icons" data-aos="fade-up">
         <div class="icon-box"><i class="fa-solid fa-map-marker-alt"></i><span>Lakeside, Pokhara</span></div>
         <div class="icon-box"><i class="fa-solid fa-certificate"></i><span>CTEVT Affiliated</span></div>
         <div class="icon-box"><i class="fa-solid fa-book"></i><span>290hr Certified Course</span></div>
       </div>
     </div>
-    <div class="about-img">
-      <img src="assets/hey.png" alt="Caregiver training" />
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Features -->
+
+  <!-- Features Section -->
   <section class="features" data-aos="fade-up">
     <h2>Why Choose Us</h2>
     <p>We offer impactful, practical, and certified caregiver training.</p>
@@ -95,12 +80,12 @@
         <h3>Small Group Training</h3>
         <p>10-20 students per batch to ensure focused and personal guidance.</p>
       </div>
-      <div class="feature-card" data-aos="zoom-in">
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
         <i class="fa-solid fa-hands-helping"></i>
         <h3>Hands-On Experience</h3>
         <p>Real-life practice sessions to prepare for caregiving challenges.</p>
       </div>
-      <div class="feature-card" data-aos-delay="100">
+       <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
         <i class="fa-solid fa-graduation-cap"></i>
         <h3>Certified Program</h3>
         <p>CTEVT-recognized certificate after course completion.</p>
@@ -108,51 +93,51 @@
     </div>
   </section>
 
-  <!-- Course Highlight -->
-<section class="course-section" data-aos="fade-up">
-  <h2 class="section-title">Caregiver Basic Training</h2>
-  <div class="course-grid">
-    <!-- Card 1: Text -->
-    <div class="course-card">
-      <p>Our 290-hour training includes essential skills such as:</p>
-      <ul>
-        <li><i class="fa-solid fa-check-circle"></i> Personal Care</li>
-        <li><i class="fa-solid fa-check-circle"></i> Medical Support</li>
-        <li><i class="fa-solid fa-check-circle"></i> Emergency Readiness</li>
-        <li><i class="fa-solid fa-check-circle"></i> Communication Skills</li>
-        <li><i class="fa-solid fa-check-circle"></i> Nutrition Management</li>
-      </ul>
-      <a href="courses.html" class="btn teal">Learn More</a>
+  <!-- Course Overview -->
+  <section class="course-section" data-aos="fade-up">
+    <h2 class="section-title">Caregiver Basic Training</h2>
+    <div class="course-grid container">
+      <div class="course-card"  data-aos="zoom-in" data-aos-delay="200">
+        <p>Our 290-hour training includes essential skills such as:</p>
+        <ul>
+          <li><i class="fa-solid fa-check-circle"></i> Personal Care</li>
+          <li><i class="fa-solid fa-check-circle"></i> Medical Support</li>
+          <li><i class="fa-solid fa-check-circle"></i> Emergency Readiness</li>
+          <li><i class="fa-solid fa-check-circle"></i> Communication Skills</li>
+          <li><i class="fa-solid fa-check-circle"></i> Nutrition Management</li>
+        </ul>
+        <a href="courses.html" class="btn gradient">Learn More</a>
+      </div>
+      <div class="course-card">
+        <p>Why choose us for caregiver training:</p>
+        <ul>
+          <li><i class="fa-solid fa-check-circle"></i> Small batch size (10–20)</li>
+          <li><i class="fa-solid fa-check-circle"></i> Hands-on experience</li>
+          <li><i class="fa-solid fa-check-circle"></i> CTEVT Certification</li>
+          <li><i class="fa-solid fa-check-circle"></i> Job placement support</li>
+          <li><i class="fa-solid fa-check-circle"></i> Experienced instructors</li>
+        </ul>
+        <a href="about.html" class="btn gradient">Why Us</a>
+      </div>
+      <div class="course-card image-card">
+        <img src="assets/hey.png" alt="Caregiver Training" />
+      </div>
     </div>
+  </section>
 
-    <!-- Card 2: More Info -->
-    <div class="course-card">
-      <p>Why choose us for caregiver training:</p>
-      <ul>
-        <li><i class="fa-solid fa-check-circle"></i> Small batch size (10-20)</li>
-        <li><i class="fa-solid fa-check-circle"></i> Hands-on experience</li>
-        <li><i class="fa-solid fa-check-circle"></i> CTEVT Certification</li>
-        <li><i class="fa-solid fa-check-circle"></i> Job placement support</li>
-        <li><i class="fa-solid fa-check-circle"></i> Experienced instructors</li>
-      </ul>
-      <a href="about.html" class="btn teal">Why Us</a>
+  <!-- CTA -->
+<section class="cta">
+  <div class="cta-flex container">
+    <div class="cta-text">
+      <h2>Start Your Journey Today!</h2>
+      <p>Enroll now or get in touch to learn how we help shape successful caregivers.</p>
     </div>
-
-    <!-- Card 3: Image -->
-    <div class="course-card image-card">
-      <img src="assets/hey.png" alt="Caregiver Training" />
+    <div class="cta-btn">
+      <a href="contact.html" class="btn gradient">Enroll Now</a>
     </div>
   </div>
 </section>
 
-
-  <!-- Call to Action -->
-  <section class="cta" data-aos="zoom-in">
-    <h2>Start Your Journey Today!</h2>
-    <p>Enroll now or get in touch to learn how we help shape successful caregivers.</p>
-<a href="contact.html" class="enroll-float">Enroll Now</a>
-
-  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -179,35 +164,27 @@
     </div>
   </footer>
 
-<script>
-  // Mobile nav toggle - UPDATED
-  const menuOpen = document.getElementById('menu-open');
-  const menuClose = document.getElementById('menu-close');
-  const navLinks = document.querySelector('.nav-links');
+  <!-- WhatsApp -->
+  <a href="https://wa.me/9771234567890" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-  function toggleMenu() {
-    navLinks.classList.toggle('active');
-  }
-
-  menuOpen.onclick = toggleMenu;
-  menuClose.onclick = toggleMenu;
-
-  // Close menu when clicking links - NEW
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
+  <!-- Scripts -->
+  <script>
+    const menuOpen = document.getElementById('menu-open');
+    const menuClose = document.getElementById('menu-close');
+    const navLinks = document.querySelector('.nav-links');
+    function toggleMenu() { navLinks.classList.toggle('active'); }
+    menuOpen.onclick = toggleMenu;
+    menuClose.onclick = toggleMenu;
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => { navLinks.classList.remove('active'); });
     });
-  });
-</script>
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
-</script>
-<a href="https://wa.me/9771234567890" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+  <script src="script.js"></script>
+
+
 </body>
 </html>
