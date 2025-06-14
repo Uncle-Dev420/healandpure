@@ -105,10 +105,22 @@ header {
 
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--pro-blue);
   cursor: pointer;
+  position: absolute; 
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1001; 
 }
+@media (max-width: 480px) {
+  .menu-toggle {
+    font-size: 2rem;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
 
 /* Hero Section */
 .hero {
