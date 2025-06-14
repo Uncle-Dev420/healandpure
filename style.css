@@ -704,3 +704,12 @@ header {
   font-size: 1.1rem;
   line-height: 1.8;
 }
+
+.testimonial-swiper {
+  padding: 3rem 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}

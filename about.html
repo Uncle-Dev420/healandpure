@@ -10,6 +10,7 @@
   <title>About Us | Heal and Pure</title>
   <link rel="shortcut icon" href="assets/logo(half).png" type="image/x-icon" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -29,6 +30,7 @@
 </div>
 
       <ul class="nav-links">
+         <li><i class="fa-solid fa-xmark close-btn" id="menu-close"></i></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -36,7 +38,6 @@
       </ul>
       <div class="menu-toggle">
         <i class="fa-solid fa-bars" id="menu-open"></i>
-        <i class="fa-solid fa-xmark" id="menu-close"></i>
       </div>
     </nav>
   </header>
@@ -73,34 +74,39 @@
 </section>
 
 <!-- Testimonials -->
-<section class="testimonials" data-aos="fade-up">
-  <div class="container">
-    <h2>What Our Students Say</h2>
-    <p>Real voices from real caregivers we’ve trained</p>
+<div class="testimonial-viewport">
+  <div class="swiper testimonial-swiper">
+    <div class="swiper-wrapper">
 
-    <div class="testimonial-viewport">
-      <div class="testimonial-grid">
-        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"The training was life-changing. Not only did I learn technical skills, but I gained confidence and compassion."</p>
-          <h4>- Anisha K., Graduate 2024</h4>
-        </div>
-
-        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"The instructors were incredible. The hands-on labs helped me feel ready for real caregiving work."</p>
-          <h4>- Ramesh T., Graduate 2024</h4>
-        </div>
-
-        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="testimonial-stars">★★★★★</div>
-          <p>"Best caregiver program in Nepal. I got my CTEVT certificate and a job within a month after completing."</p>
-          <h4>- Sunita M., Graduate 2023</h4>
-        </div>
+      <div class="swiper-slide testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"The training was life-changing. Not only did I learn technical skills, but I gained confidence and compassion."</p>
+        <h4>- Anisha K., Graduate 2024</h4>
       </div>
+
+      <div class="swiper-slide testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"The instructors were incredible. The hands-on labs helped me feel ready for real caregiving work."</p>
+        <h4>- Ramesh T., Graduate 2024</h4>
+      </div>
+
+      <div class="swiper-slide testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>"Best caregiver program in Nepal. I got my CTEVT certificate and a job within a month after completing."</p>
+        <h4>- Sunita M., Graduate 2023</h4>
+      </div>
+
     </div>
+
+    <!-- Optional arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Pagination dots -->
+    <div class="swiper-pagination"></div>
   </div>
-</section>
+</div>
+
 
 
 
@@ -154,5 +160,25 @@
 <a href="https://wa.me/9771234567890" class="whatsapp-float" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".testimonial-swiper", {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+  });
+</script>
 </body>
 </html>
