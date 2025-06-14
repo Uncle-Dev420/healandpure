@@ -1,5 +1,11 @@
-// Scroll-triggered counter animation
+// Initialize AOS animation and scroll-triggered counter animation on page load
 document.addEventListener("DOMContentLoaded", () => {
+  AOS.init({
+    duration: 1000,
+    once: true,
+    easing: "ease-in-out",
+  });
+
   const counters = document.querySelectorAll(".counter");
   const speed = 200;
 
@@ -21,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Only animate when visible
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
