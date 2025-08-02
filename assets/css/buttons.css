@@ -1,0 +1,110 @@
+
+.button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  border-radius: 100em;
+  background-color: #007EA2;
+  box-shadow:
+    -0.15em -0.15em 0.15em -0.075em rgba(0, 126, 162, 0.25),
+    0.0375em 0.0375em 0.0675em 0 rgba(0, 126, 162, 0.15);
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: calc(100% + 0.3em);
+  height: calc(100% + 0.3em);
+  top: -0.15em;
+  left: -0.15em;
+  border-radius: inherit;
+  background: linear-gradient(
+    -135deg,
+    rgba(0, 126, 162, 0.5),
+    transparent 20%,
+    transparent 100%
+  );
+  filter: blur(0.0125em);
+  opacity: 0.25;
+  mix-blend-mode: multiply;
+}
+
+.button .button-outer {
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+  transition: box-shadow 300ms ease;
+  box-shadow:
+    0 0.05em 0.05em -0.01em rgba(0, 126, 162, 1),
+    0 0.01em 0.01em -0.01em rgba(0, 126, 162, 0.5),
+    0.15em 0.3em 0.1em -0.01em rgba(0, 126, 162, 0.25);
+}
+
+.button:hover .button-outer {
+  box-shadow: none;
+}
+
+.button-inner {
+  --inset: 0.035em;
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+  padding: 1em 1.5em;
+  background-image: linear-gradient(
+    135deg,
+    #77C243,
+    #007EA2
+  );
+  transition:
+    box-shadow 300ms ease,
+    clip-path 250ms ease,
+    background-image 250ms ease,
+    transform 250ms ease;
+  overflow: clip;
+  clip-path: inset(0 0 0 0 round 100em);
+  box-shadow:
+    0 0 0 0 inset rgba(0, 0, 0, 0.1),
+    -0.05em -0.05em 0.05em 0 inset rgba(0, 0, 0, 0.25),
+    0 0 0 0 inset rgba(0, 0, 0, 0.1),
+    0 0 0.05em 0.2em inset rgba(255, 255, 255, 0.25),
+    0.025em 0.05em 0.1em 0 inset rgba(255, 255, 255, 1),
+    0.12em 0.12em 0.12em inset rgba(255, 255, 255, 0.25),
+    -0.075em -0.25em 0.25em 0.1em inset rgba(0, 0, 0, 0.25);
+}
+
+.button:hover .button-inner {
+  clip-path: inset(0.0625em round 100em);
+  box-shadow:
+    0.1em 0.15em 0.05em 0 inset rgba(0, 0, 0, 0.75),
+    -0.025em -0.03em 0.05em 0.025em inset rgba(0, 0, 0, 0.5),
+    0.25em 0.25em 0.2em 0 inset rgba(0, 0, 0, 0.5),
+    0 0 0.05em 0.5em inset rgba(255, 255, 255, 0.15),
+    0 0 0 0 inset rgba(255, 255, 255, 1),
+    0.12em 0.12em 0.12em inset rgba(255, 255, 255, 0.25),
+    -0.075em -0.12em 0.2em 0.1em inset rgba(0, 0, 0, 0.25);
+}
+
+.button .button-inner span {
+  position: relative;
+  z-index: 4;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0);
+  background-image: linear-gradient(135deg, #ffffff, #f0f0f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: rgba(0, 0, 0, 0.05) 0 0 0.1em;
+  user-select: none;
+  transition: transform 250ms ease;
+}
+
+.button:hover .button-inner span {
+  transform: scale(0.975);
+}
+
+.button:active .button-inner {
+  transform: scale(0.975);
+}

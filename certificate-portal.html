@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Lookup Portal | Heal and Pure</title>
+  <meta name="description" content="Lookup and download your official certificate.">
+  <meta name="keywords" content="Certificate, Download, Heal and Pure, CTEVT, Caregiver, Pokhara">
+  <meta name="author" content="Heal and Pure Caregiver Training Center">
+  <link rel="shortcut icon" href="assets/logo(full).png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/buttons.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* --- Copied from about.html for perfect match --- */
+    .glass-nav { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.6); border-bottom: 1px solid rgba(255,255,255,0.2); transition: background 0.3s ease, box-shadow 0.3s ease; }
+    .glass-nav.scrolled { background: rgba(255, 255, 255, 0.9); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    [data-theme="dark"] .glass-nav { background: rgba(30, 41, 59, 0.95); border-color: rgba(255, 255, 255, 0.1); color: #f3f4f6; }
+    [data-theme="dark"] .glass-nav h1, [data-theme="dark"] .glass-nav p { color: #f3f4f6 !important; }
+    [data-theme="dark"] nav a { color: #77C243 !important; }
+    [data-theme="dark"] nav a:hover { color: #fff !important; }
+    .theme-checkbox {
+      --toggle-size: 16px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 6.25em;
+      height: 3.125em;
+      background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+      background-size: 205%;
+      background-position: 0;
+      transition: 0.4s;
+      border-radius: 99em;
+      position: relative;
+      cursor: pointer;
+      font-size: var(--toggle-size);
+    }
+    .theme-checkbox::before {
+      content: "";
+      width: 2.25em;
+      height: 2.25em;
+      position: absolute;
+      top: 0.438em;
+      left: 0.438em;
+      background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+      background-size: 205%;
+      background-position: 100%;
+      border-radius: 50%;
+      transition: 0.4s;
+    }
+    .theme-checkbox:checked::before {
+      left: calc(100% - 2.25em - 0.438em);
+      background-position: 0;
+    }
+    .theme-checkbox:checked {
+      background-position: 100%;
+    }
+  </style>
+</head>
+<body class="text-gray-900 bg-white overflow-x-hidden">
+<div id="vanta-bg" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/9779800000000" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <svg width="32" height="32" fill="white" viewBox="0 0 32 32"><path d="M16.004 2.003a14.006 14.006 0 0 0-12.175 21.15l-1.82 6.648 6.817-1.789a14.01 14.01 0 1 0 7.178-25.997zm0 2.626a11.373 11.373 0 0 1 9.927 17.039l-.215.354.135.373 1.176 4.293-4.393-1.154-.372-.134-.354.215a11.378 11.378 0 1 1-6.989-20.986zm-5.33 6.271c-.51.012-.98.043-1.447.09-.55.056-1.074.363-1.307.857-.363.748-.71 2.15.123 4.455 1.52 4.12 5.416 8.19 10.16 9.666 1.078.331 1.93.106 2.406-.18.508-.304 1.08-1.14 1.23-1.623.154-.49.154-.907.106-1.254-.06-.423-.48-.637-1.01-.848-.524-.21-1.08-.439-1.61-.727-.362-.195-.78-.03-1.03.308-.259.348-.51.674-.707.933a.36.36 0 0 1-.412.148c-1.19-.47-2.24-1.34-3.09-2.44a.353.353 0 0 1 .035-.438c.184-.208.392-.433.608-.672.284-.317.35-.781.182-1.157a14.226 14.226 0 0 0-.718-1.627c-.185-.384-.479-.787-.838-.849-.345-.06-.768-.06-1.254.107z"/></svg>
+  </a>
+  <!-- Navigation -->
+  <header id="mainNav" class="glass-nav sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="flex items-center space-x-3">
+        <img src="assets/logo(full).png" alt="Logo" class="h-10">
+        <div>
+          <h1 class="text-xl font-bold text-gray-900 dark:text-gray-100">Heal and Pure</h1>
+          <p class="text-sm text-gray-700 dark:text-gray-200">Caregiver Training Center</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex space-x-8 font-semibold text-[#007EA2] items-center">
+        <a href="index.html" class="relative group">Home<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#007EA2] group-hover:w-full transition-all"></span></a>
+        <a href="about.html" class="relative group">About<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#007EA2] group-hover:w-full transition-all"></span></a>
+        <a href="courses.html" class="relative group">Courses<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#007EA2] group-hover:w-full transition-all"></span></a>
+        <a href="contact.html" class="relative group">Contact<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#007EA2] group-hover:w-full transition-all"></span></a>
+        <a href="certificate-portal.html" class="relative group">Certificate Portal<span class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#007EA2] group-hover:w-full transition-all"></span></a>
+        <input type="checkbox" id="theme-toggle" class="theme-checkbox ml-6" aria-label="Toggle dark mode" />
+      </nav>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <main class="max-w-xl mx-auto py-16 px-6">
+    <div class="bg-white dark:bg-[#1e293b] rounded-2xl shadow-lg p-8 flex flex-col gap-6 items-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-center text-[#007EA2] dark:text-primary mb-2">Certificate Lookup</h1>
+      <form id="lookup-form" autocomplete="off" novalidate class="w-full flex flex-col gap-4">
+        <label for="reference" class="input-label font-semibold text-gray-900 dark:text-gray-100">Reference Number</label>
+        <input 
+          type="text" 
+          id="reference" 
+          name="reference" 
+          minlength="6" 
+          maxlength="12" 
+          pattern="[A-Za-z0-9]{6,12}"
+          aria-label="Reference Number" 
+          aria-describedby="refHelp"
+          required
+          class="glass-input text-gray-900 dark:text-gray-100 dark:bg-[#0f172a]"
+        >
+        <div id="refHelp" class="input-help text-gray-700 dark:text-gray-200">6–12 letters or numbers</div>
+        <button type="submit" id="lookup-btn" class="button" disabled>
+          <div class="button-outer"><div class="button-inner"><span>Lookup Certificate</span></div></div>
+        </button>
+      </form>
+      <div id="loader" class="loader" aria-live="polite" hidden></div>
+      <div id="result" class="result-area"></div>
+    </div>
+  </main>
+
+  <!-- Admin Login Portal -->
+  <main class="max-w-xl mx-auto py-8 px-6">
+    <div class="bg-white dark:bg-[#1e293b] rounded-2xl shadow-lg p-8 flex flex-col gap-6 items-center">
+      <h2 class="text-2xl font-bold text-center text-[#007EA2] dark:text-primary mb-2">Admin Login</h2>
+      <form id="admin-login-form" method="POST" action="http://localhost:3001/admin-login" class="w-full flex flex-col gap-4">
+        <label for="admin-username" class="input-label font-semibold text-gray-900 dark:text-gray-100">Username</label>
+        <input type="text" id="admin-username" name="username" required class="glass-input text-gray-900 dark:text-gray-100 dark:bg-[#0f172a]">
+        <label for="admin-password" class="input-label font-semibold text-gray-900 dark:text-gray-100">Password</label>
+        <input type="password" id="admin-password" name="password" required class="glass-input text-gray-900 dark:text-gray-100 dark:bg-[#0f172a]">
+        <button type="submit" class="button">
+          <div class="button-outer"><div class="button-inner"><span>Login</span></div></div>
+        </button>
+      </form>
+      <div id="admin-login-message" class="text-red-600 mt-2"></div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc" hidden>
+    <div class="modal-content">
+      <h2 id="modal-title">Error</h2>
+      <p id="modal-desc"></p>
+      <button id="close-modal" class="btn-secondary" aria-label="Close modal">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+  // Admin login AJAX handler
+  document.addEventListener('DOMContentLoaded', function() {
+    const adminForm = document.getElementById('admin-login-form');
+    if (adminForm) {
+      adminForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const username = document.getElementById('admin-username').value;
+        const password = document.getElementById('admin-password').value;
+        const msgDiv = document.getElementById('admin-login-message');
+        msgDiv.textContent = '';
+        try {
+          const res = await fetch('http://localhost:3001/admin-login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify({ username, password })
+          });
+          const data = await res.json();
+          if (res.ok && data.success) {
+            window.location.href = 'http://localhost:3001/admin-upload';
+          } else {
+            msgDiv.textContent = data.message || 'Login failed.';
+          }
+        } catch (err) {
+          msgDiv.textContent = 'Server error. Please try again.';
+        }
+      });
+    }
+  });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+  <script>
+let vantaEffect;
+function getVantaBgColor() {
+  return document.documentElement.getAttribute('data-theme') === 'dark' ? 0x0f172a : 0xffffff;
+}
+function initVanta() {
+  if (vantaEffect) vantaEffect.destroy();
+  vantaEffect = VANTA.NET({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x77C243,          // Brand green
+    backgroundColor: getVantaBgColor(),
+    points: 8.00,              // Fewer points
+    maxDistance: 18.00,        // Shorter lines
+    spacing: 20.00,
+    showDots: true,
+    opacity: 0.35,             // Softer lines/dots
+    speed: 0.6                 // Slower movement
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  initVanta();
+  const observer = new MutationObserver(() => {
+    if (vantaEffect) vantaEffect.setOptions({ backgroundColor: getVantaBgColor() });
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+});
+  </script>
+  <script>
+    // Dark mode toggle logic (same as main site)
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      document.getElementById('theme-toggle').checked = (theme === 'dark');
+    }
+    function getPreferredTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved) return saved;
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+      return 'light';
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggle = document.getElementById('theme-toggle');
+      const initialTheme = getPreferredTheme();
+      setTheme(initialTheme);
+      themeToggle.checked = (initialTheme === 'dark');
+      themeToggle.addEventListener('change', (e) => {
+        setTheme(e.target.checked ? 'dark' : 'light');
+      });
+    });
+  </script>
+</body>
+</html>
